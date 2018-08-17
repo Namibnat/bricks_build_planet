@@ -10,9 +10,9 @@ RADIUS = 10000
 
 # Bricks per meter
 # lets use half bricks - they're more close to square, then we can double them
-HALFBRICKSPERMETER = 10
+HALFBRICKSPERKILOMETER = 10 * 1000
 
-# Area of a planet
-# of course, times by two since we used half bricks
-area_of_a_planet = 2*int(math.pi*((RADIUS*HALFBRICKSPERMETER)**2))
-print("{:,}".format(area_of_a_planet))
+# Whole bricks to make a planet
+# of course, divide by two since we used half bricks
+area_of_a_planet = int(math.pi*((RADIUS * HALFBRICKSPERKILOMETER)**2))/2
+print(area_of_a_planet)
